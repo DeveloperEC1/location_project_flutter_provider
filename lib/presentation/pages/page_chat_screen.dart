@@ -723,7 +723,8 @@ class _PageChatScreenProvState extends State<PageChatScreenProv> {
                 color: ConstantsColors.DARK_GRAY2,
               ),
               child: const Center(
-                child: CircularProgressIndicator(),
+                child:
+                CircularProgressIndicator(),
               ),
             ),
           )
