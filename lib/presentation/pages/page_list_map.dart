@@ -335,17 +335,6 @@ class _PageListMapProvState extends State<PageListMapProv> {
     );
   }
 
-  Widget _loading() {
-    return Container(
-      decoration: BoxDecoration(
-        color: ConstantsColors.DARK_GRAY2,
-      ),
-      child: const Center(
-        child: CircularProgressIndicator(),
-      ),
-    );
-  }
-
   Widget _imagesListGrid() {
     return Container(
       height: ResponsiveScreen().heightMediaQuery(context, 40),
@@ -687,6 +676,17 @@ class _PageListMapProvState extends State<PageListMapProv> {
         ],
         fontSize: fontSize,
         color: color,
+      ),
+    );
+  }
+
+  Widget _loading() {
+    return Container(
+      decoration: BoxDecoration(
+        color: ConstantsColors.DARK_GRAY2,
+      ),
+      child: const Center(
+        child: CircularProgressIndicator(),
       ),
     );
   }

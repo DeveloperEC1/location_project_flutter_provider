@@ -168,12 +168,6 @@ class _PagePhoneSMSAuthProvState extends State<PagePhoneSMSAuthProv> {
     );
   }
 
-  Widget _loading() {
-    return _provider.isLoadingGet == true
-        ? CircularProgressIndicator()
-        : Container();
-  }
-
   Widget _buttonSendSms() {
     return Padding(
       padding: EdgeInsets.only(
@@ -252,5 +246,11 @@ class _PagePhoneSMSAuthProvState extends State<PagePhoneSMSAuthProv> {
         ),
       ),
     );
+  }
+
+  Widget _loading() {
+    return _provider.isLoadingGet == true
+        ? CircularProgressIndicator()
+        : Container();
   }
 }

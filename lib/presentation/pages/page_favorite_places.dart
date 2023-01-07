@@ -118,22 +118,6 @@ class _PageFavoritePlacesProvState extends State<PageFavoritePlacesProv> {
     );
   }
 
-  Widget _loading() {
-    return _provider.isCheckingBottomSheetGet == true
-        ? Positioned.fill(
-            child: BackdropFilter(
-              filter: ImageFilter.blur(
-                sigmaX: ResponsiveScreen().widthMediaQuery(context, 5),
-                sigmaY: ResponsiveScreen().widthMediaQuery(context, 5),
-              ),
-              child: Container(
-                color: Colors.black.withOpacity(0),
-              ),
-            ),
-          )
-        : Container();
-  }
-
   Widget _buildAnimatedItem(
     BuildContext context,
     int index,
@@ -303,5 +287,21 @@ class _PageFavoritePlacesProvState extends State<PageFavoritePlacesProv> {
         color: Color(color),
       ),
     );
+  }
+
+  Widget _loading() {
+    return _provider.isCheckingBottomSheetGet == true
+        ? Positioned.fill(
+            child: BackdropFilter(
+              filter: ImageFilter.blur(
+                sigmaX: ResponsiveScreen().widthMediaQuery(context, 5),
+                sigmaY: ResponsiveScreen().widthMediaQuery(context, 5),
+              ),
+              child: Container(
+                color: Colors.black.withOpacity(0),
+              ),
+            ),
+          )
+        : Container();
   }
 }
