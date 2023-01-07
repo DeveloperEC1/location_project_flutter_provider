@@ -47,12 +47,7 @@ class _PageFavoritePlacesProvState extends State<PageFavoritePlacesProv> {
     _provider.userLocation(context);
     return Scaffold(
       appBar: _appBar(),
-      body: Stack(
-        children: [
-          _listViewData(),
-          _loading(),
-        ],
-      ),
+      body: _body(),
     );
   }
 
@@ -74,6 +69,15 @@ class _PageFavoritePlacesProvState extends State<PageFavoritePlacesProv> {
         ),
         onPressed: () => Navigator.of(context).pop(),
       ),
+    );
+  }
+
+  Widget _body() {
+    return Stack(
+      children: [
+        _listViewData(),
+        _loading(),
+      ],
     );
   }
 

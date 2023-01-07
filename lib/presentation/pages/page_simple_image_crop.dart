@@ -14,7 +14,7 @@ class PageSimpleImageCrop extends StatelessWidget {
     final _cropKey = GlobalKey<ImgCropState>();
     return Scaffold(
       appBar: _appBar(context),
-      body: _showImage(_cropKey),
+      body: _body(_cropKey),
       floatingActionButton: _floatingActionButton(context, _cropKey),
     );
   }
@@ -33,7 +33,7 @@ class PageSimpleImageCrop extends StatelessWidget {
     );
   }
 
-  Widget _showImage(var cropKey) {
+  Widget _body(var cropKey) {
     return image != null
         ? Center(
             child: ImgCrop(

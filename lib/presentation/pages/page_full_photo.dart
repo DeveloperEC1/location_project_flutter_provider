@@ -10,10 +10,14 @@ class PageFullPhoto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: PhotoView(
-          imageProvider: NetworkImage(url),
-        ),
+      body: _body(),
+    );
+  }
+
+  Widget _body() {
+    return Container(
+      child: PhotoView(
+        imageProvider: NetworkImage(url),
       ),
     );
   }

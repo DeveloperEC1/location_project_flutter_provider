@@ -37,7 +37,7 @@ class ProviderListSettings extends ChangeNotifier {
 
   void initGetSharedPrefs() {
     SharedPreferences.getInstance().then(
-          (prefs) {
+      (prefs) {
         sharedPref(prefs);
 
         valueOpen(sharedGet.getString('open') ?? '');
@@ -45,14 +45,12 @@ class ProviderListSettings extends ChangeNotifier {
         valueOpenGet == '&opennow=true'
             ? valueOpen('Open')
             : valueOpenGet == ''
-            ? valueOpen('All(Open + Close)')
-            : valueOpen('All(Open + Close)');
+                ? valueOpen('All(Open + Close)')
+                : valueOpen('All(Open + Close)');
 
-        valueRadius(
-            sharedGet.getDouble('rangeRadius') ?? 5000.0);
+        valueRadius(sharedGet.getDouble('rangeRadius') ?? 5000.0);
 
-        valueGeofence(
-            sharedGet.getDouble('rangeGeofence') ?? 500.0);
+        valueGeofence(sharedGet.getDouble('rangeGeofence') ?? 500.0);
       },
     );
   }

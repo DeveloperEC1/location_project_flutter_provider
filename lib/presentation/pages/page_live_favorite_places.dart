@@ -49,12 +49,16 @@ class _PageLiveFavoritePlacesProvState
     _provider.userLocation(context);
     return Scaffold(
       appBar: WidgetAppBarTotal(),
-      body: Stack(
-        children: [
-          _listViewData(),
-          _loading(),
-        ],
-      ),
+      body: _body(),
+    );
+  }
+
+  Widget _body() {
+    return Stack(
+      children: [
+        _listViewData(),
+        _loading(),
+      ],
     );
   }
 

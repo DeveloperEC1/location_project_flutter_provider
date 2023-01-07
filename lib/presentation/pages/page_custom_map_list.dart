@@ -44,12 +44,16 @@ class _PageCustomMapListProvState extends State<PageCustomMapListProv> {
     _provider.currentLocation();
     return Scaffold(
       appBar: WidgetAppBarTotal(),
-      body: Stack(
-        children: [
-          _googleMap(),
-          _blur(),
-        ],
-      ),
+      body: _body(),
+    );
+  }
+
+  Widget _body() {
+    return Stack(
+      children: [
+        _googleMap(),
+        _blur(),
+      ],
     );
   }
 

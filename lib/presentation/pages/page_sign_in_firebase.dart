@@ -47,28 +47,32 @@ class _PageSignInFirebaseProvState extends State<PageSignInFirebaseProv> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueGrey,
-      body: Form(
-        key: _provider.formKeyGet,
-        child: Container(
-          child: Center(
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  _title(),
-                  UtilsApp.dividerHeight(context, 70),
-                  _textFieldsData(),
-                  UtilsApp.dividerHeight(context, 20),
-                  _buttonLogin(),
-                  UtilsApp.dividerHeight(context, 5),
-                  _showErrors(),
-                  _buttonToRegister(),
-                  UtilsApp.dividerHeight(context, 20),
-                  _loginFacebookGmailSms(),
-                  UtilsApp.dividerHeight(context, 20),
-                  _loading(),
-                ],
-              ),
+      body: _body(context),
+    );
+  }
+
+  Widget _body(BuildContext context) {
+    return Form(
+      key: _provider.formKeyGet,
+      child: Container(
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                _title(),
+                UtilsApp.dividerHeight(context, 70),
+                _textFieldsData(),
+                UtilsApp.dividerHeight(context, 20),
+                _buttonLogin(),
+                UtilsApp.dividerHeight(context, 5),
+                _showErrors(),
+                _buttonToRegister(),
+                UtilsApp.dividerHeight(context, 20),
+                _loginFacebookGmailSms(),
+                UtilsApp.dividerHeight(context, 20),
+                _loading(),
+              ],
             ),
           ),
         ),

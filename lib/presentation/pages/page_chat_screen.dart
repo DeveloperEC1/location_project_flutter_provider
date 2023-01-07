@@ -68,12 +68,7 @@ class _PageChatScreenProvState extends State<PageChatScreenProv> {
     _provider.handleCameraAndMic();
     return Scaffold(
       appBar: _appBar(),
-      body: Stack(
-        children: <Widget>[
-          _mainBody(),
-          _loading(),
-        ],
-      ),
+      body: _body(),
     );
   }
 
@@ -106,6 +101,15 @@ class _PageChatScreenProvState extends State<PageChatScreenProv> {
         ),
         onPressed: () => Navigator.of(context).pop(),
       ),
+    );
+  }
+
+  Widget _body() {
+    return Stack(
+      children: <Widget>[
+        _mainBody(),
+        _loading(),
+      ],
     );
   }
 

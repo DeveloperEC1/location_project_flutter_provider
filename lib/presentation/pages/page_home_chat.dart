@@ -43,7 +43,7 @@ class _PageHomeChatProvState extends State<PageHomeChatProv> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appBar(),
-      body: _listViewData(),
+      body: _body(),
     );
   }
 
@@ -68,7 +68,7 @@ class _PageHomeChatProvState extends State<PageHomeChatProv> {
     );
   }
 
-  Widget _listViewData() {
+  Widget _body() {
     return Container(
       child: Center(
         child: StreamBuilder(
@@ -121,11 +121,10 @@ class _PageHomeChatProvState extends State<PageHomeChatProv> {
                     ? CachedNetworkImage(
                         placeholder: (context, url) => Container(
                           child: CircularProgressIndicator(
-                            strokeWidth:
-                                ResponsiveScreen().widthMediaQuery(context, 1),
-                            valueColor: AlwaysStoppedAnimation<Color>(
-                                ConstantsColors.ORANGE)
-                          ),
+                              strokeWidth: ResponsiveScreen()
+                                  .widthMediaQuery(context, 1),
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                  ConstantsColors.ORANGE)),
                           width:
                               ResponsiveScreen().widthMediaQuery(context, 50),
                           height:

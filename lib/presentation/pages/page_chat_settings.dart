@@ -41,12 +41,16 @@ class _PageChatSettingsProvState extends State<PageChatSettingsProv> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: WidgetAppBarTotal(),
-      body: Stack(
-        children: <Widget>[
-          _mainBody(),
-          _loading(),
-        ],
-      ),
+      body: _body(),
+    );
+  }
+
+  Widget _body() {
+    return Stack(
+      children: <Widget>[
+        _mainBody(),
+        _loading(),
+      ],
     );
   }
 

@@ -71,14 +71,18 @@ class _PageMapListProvState extends State<PageMapListProv> {
     _provider.currentLocation();
     return Scaffold(
       appBar: WidgetAppBarTotal(),
-      body: Stack(
-        children: [
-          _googleMap(_provider.currentLocationGet),
-          if (_provider.isSearchingGet) _loading(),
-        ],
-      ),
+      body: _body(),
       floatingActionButton: _floatingActionButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+    );
+  }
+
+  Widget _body() {
+    return Stack(
+      children: [
+        _googleMap(_provider.currentLocationGet),
+        if (_provider.isSearchingGet) _loading(),
+      ],
     );
   }
 

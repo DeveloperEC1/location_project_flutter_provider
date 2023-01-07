@@ -47,26 +47,30 @@ class _PagePhoneSMSAuthProvState extends State<PagePhoneSMSAuthProv> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.blueGrey,
-        child: Center(
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                _title(),
-                UtilsApp.dividerHeight(context, 70),
-                _textFieldsData(),
-                UtilsApp.dividerHeight(context, 20),
-                _showErrors(),
-                UtilsApp.dividerHeight(context, 20),
-                _loading(),
-                UtilsApp.dividerHeight(context, 20),
-                _buttonSendSms(),
-                UtilsApp.dividerHeight(context, 20),
-                _buttonLogin(),
-              ],
-            ),
+      body: _body(context),
+    );
+  }
+
+  Widget _body(BuildContext context) {
+    return Container(
+      color: Colors.blueGrey,
+      child: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              _title(),
+              UtilsApp.dividerHeight(context, 70),
+              _textFieldsData(),
+              UtilsApp.dividerHeight(context, 20),
+              _showErrors(),
+              UtilsApp.dividerHeight(context, 20),
+              _loading(),
+              UtilsApp.dividerHeight(context, 20),
+              _buttonSendSms(),
+              UtilsApp.dividerHeight(context, 20),
+              _buttonLogin(),
+            ],
           ),
         ),
       ),

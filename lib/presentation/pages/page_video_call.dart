@@ -69,13 +69,17 @@ class _PageVideoCallProvState extends State<PageVideoCallProv> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: WidgetAppBarTotal(),
-      body: Stack(
-        children: <Widget>[
-          _viewRows(),
-//            _panel(),
-          _toolbar(),
-        ],
-      ),
+      body: _body(),
+    );
+  }
+
+  Widget _body() {
+    return Stack(
+      children: <Widget>[
+        _viewRows(),
+        // _panel(),
+        _toolbar(),
+      ],
     );
   }
 
