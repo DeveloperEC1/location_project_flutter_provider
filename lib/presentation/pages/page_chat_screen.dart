@@ -485,7 +485,7 @@ class _PageChatScreenProvState extends State<PageChatScreenProv> {
           Row(
             children: <Widget>[
               _provider.isLastMessageLeft(index)
-                  ? _gotMessageItemProfileImage()
+                  ? _gotMessageItemProfilePicture()
                   : Container(
                       width: ResponsiveScreen().widthMediaQuery(context, 35)),
               document.data()['type'] == 0
@@ -514,7 +514,7 @@ class _PageChatScreenProvState extends State<PageChatScreenProv> {
     );
   }
 
-  Widget _gotMessageItemProfileImage() {
+  Widget _gotMessageItemProfilePicture() {
     return Material(
       child: CachedNetworkImage(
         placeholder: (context, url) => Container(
